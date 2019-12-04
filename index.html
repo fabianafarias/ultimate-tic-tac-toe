@@ -7,13 +7,12 @@
     <title>Ultimate Tic Tac Toe</title>
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-    <script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
 </head>
 <body>
 <h1>Ultimate Tic Tac Toe</h1>
 <section ng-controller="GameController as Game">
     <table id="board">
-        <ngView></ngView>
         <tr ng-repeat="gridrow in grids">
             <td ng-repeat="grid in gridrow" class="win-{{ grid.win }} turn-{{ currentPlayer }}">
                     <table class="grid winmove-{{ grid.winMove }} pickable-{{ grid.isPickable() }}" ng-init="rows=[[],[],[]]">
